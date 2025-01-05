@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url(assets/clock.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -9,18 +9,47 @@ body{
     justify-content: start;
     min-height: 100vh;
     align-items: center;
-   
 }
-.clock-container{
+
+.clock-container {
     padding-left: 50px;
-
 }
-.clock{
 
+.clock {
     color: white;
     font-size: 6rem;
     font-weight: bold;
-    font-family:'Lucida Sans';
-    text-align:left;
-   
+    font-family: 'Lucida Sans';
+    text-align: left;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+    .clock-container {
+        padding-left: 20px;
+    }
+
+    .clock {
+        font-size: 4rem; /* Adjust the font size for smaller screens */
+        text-align: center; /* Center align text for better readability */
+    }
+
+    body {
+        flex-direction: column; /* Adjust layout to stack elements vertically */
+        justify-content: center; /* Center elements on the screen */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .clock-container {
+        padding-left: 10px;
+        backdrop-filter: blur(5px);
+        
+    }
+
+    .clock {
+        font-size: 3rem; /* Further adjust font size for very small screens */
+        
+    }
 }
